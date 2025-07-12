@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Feedback Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <form id="feedback-form" novalidate>
+    <label>
+      Name
+      <input type="text"
+             id="name"
+             name="name"
+             data-tooltip="Enter your full name"
+             maxlength="50" />
+      <span class="error" id="name-error"></span>
+    </label>
+  <label>
+      Email
+      <input type="email"
+             id="email"
+             name="email"
+             data-tooltip="We'll never share your email"
+             maxlength="100" />
+      <span class="error" id="email-error"></span>
+    </label>
+    <label>
+      Comments
+      <textarea id="comments"
+                name="comments"
+                data-tooltip="Max 500 characters"
+                maxlength="500"></textarea>
+      <div class="char-count" id="char-count">0 / 500</div>
+      <span class="error" id="comments-error"></span>
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+  <h2>Previous Feedback</h2>
+  <div id="feedback-display"></div>
+  <div id="tooltip" class="tooltip" hidden></div>
+  <script src="cp_1.js"></script>
+</body>
+</html>
